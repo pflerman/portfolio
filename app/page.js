@@ -30,10 +30,11 @@ export default function Home() {
               LinkedIn
             </a>
             <a 
-              href="mailto:hola@pabloflerman.dev"
+              href="https://wa.me/5491140461603"
+              target="_blank"
               className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg transition"
             >
-              Contacto
+              WhatsApp
             </a>
           </div>
         </div>
@@ -143,12 +144,21 @@ export default function Home() {
           <p className="text-lg text-gray-300 mb-8">
             Estoy disponible para proyectos freelance y oportunidades full-time.
           </p>
-          <a 
-            href="mailto:hola@pabloflerman.dev"
-            className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg transition"
-          >
-            Enviar mensaje
-          </a>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <a 
+              href="https://wa.me/5491140461603"
+              target="_blank"
+              className="inline-block px-8 py-4 bg-green-600 hover:bg-green-700 rounded-lg text-lg transition"
+            >
+              Contactar por WhatsApp
+            </a>
+            <a 
+              href="mailto:pflerman@gmail.com"
+              className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg transition"
+            >
+              Enviar Email
+            </a>
+          </div>
         </div>
       </section>
 
