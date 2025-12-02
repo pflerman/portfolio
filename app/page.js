@@ -1,65 +1,157 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
+    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      
+      {/* Hero Section */}
+      <section className="container mx-auto px-6 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Pablo Francisco Lerman
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="text-2xl md:text-3xl text-gray-300 mb-4">
+            Desarrollador Full Stack
+          </p>
+          <p className="text-lg text-gray-400 mb-8">
+            Systems Analyst transitioning to Software Development
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <a 
+              href="https://github.com/pflerman" 
+              target="_blank"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              GitHub
+            </a>
+            <a 
+              href="https://linkedin.com/in/pabloflerman" 
+              target="_blank"
+              className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg transition"
             >
-              Learning
-            </a>{" "}
-            center.
+              LinkedIn
+            </a>
+            <a 
+              href="mailto:hola@pabloflerman.dev"
+              className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg transition"
+            >
+              Contacto
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6 text-center">Sobre mí</h2>
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            Soy Systems Analyst de Argentina con años de experiencia en desarrollo de software. 
+            Mi transición hacia el desarrollo full-time nace de una pasión genuina: cuando programo, 
+            el tiempo literalmente vuela.
+          </p>
+          <p className="text-lg text-gray-300 leading-relaxed">
+            He construido e-commerce completos, CRMs, aplicaciones móviles y sistemas de gestión 
+            para negocios reales. Trabajo con tecnologías modernas y me enfoco en crear soluciones 
+            prácticas que resuelven problemas reales.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* Tech Stack */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-8 text-center">Stack Técnico</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              'JavaScript', 'React', 'Next.js', 'Node.js',
+              'Python', 'Go', 'Flutter', 'Tailwind CSS',
+              'Supabase', 'PostgreSQL', 'Git', 'Linux'
+            ].map((tech) => (
+              <div key={tech} className="bg-gray-800 rounded-lg p-4 text-center hover:bg-gray-700 transition">
+                <span className="text-lg">{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center">Proyectos Destacados</h2>
+          
+          <div className="space-y-8">
+            
+            {/* Proyecto 1: Cajas Ordenadoras */}
+            <div className="bg-gray-800 rounded-lg p-8 hover:bg-gray-750 transition">
+              <h3 className="text-2xl font-bold mb-3">E-commerce Cajas Ordenadoras</h3>
+              <p className="text-gray-300 mb-4">
+                Plataforma de e-commerce completa con integración de pagos MercadoPago, 
+                gestión de productos, carrito de compras y panel de administración. 
+                Migración completa desde TiendaNube a solución custom.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">Next.js</span>
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">React</span>
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">Supabase</span>
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">MercadoPago API</span>
+              </div>
+              <a 
+                href="https://cajasordenadoras.com" 
+                target="_blank"
+                className="text-blue-400 hover:text-blue-300"
+              >
+                Ver sitio en producción →
+              </a>
+            </div>
+
+            {/* Proyecto 2: CRM */}
+            <div className="bg-gray-800 rounded-lg p-8 hover:bg-gray-750 transition">
+              <h3 className="text-2xl font-bold mb-3">Sistema CRM Cloud</h3>
+              <p className="text-gray-300 mb-4">
+                Sistema de gestión de clientes con dashboard interactivo, seguimiento de ventas, 
+                gestión de contactos y notificaciones automáticas por email.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">React</span>
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">Supabase</span>
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">Tailwind CSS</span>
+              </div>
+            </div>
+
+            {/* Proyecto 3: MercadoLibre Manager */}
+            <div className="bg-gray-800 rounded-lg p-8 hover:bg-gray-750 transition">
+              <h3 className="text-2xl font-bold mb-3">MercadoLibre Product Manager</h3>
+              <p className="text-gray-300 mb-4">
+                Aplicación GUI en Python para gestión masiva de publicaciones en MercadoLibre. 
+                Incluye autenticación OAuth, multi-cuenta, filtros avanzados y actualización batch de productos.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">Python</span>
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">MercadoLibre API</span>
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm">OAuth</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="container mx-auto px-6 py-16 pb-20">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">¿Trabajamos juntos?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Estoy disponible para proyectos freelance y oportunidades full-time.
+          </p>
+          <a 
+            href="mailto:hola@pabloflerman.dev"
+            className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Enviar mensaje
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+    </main>
   );
 }
