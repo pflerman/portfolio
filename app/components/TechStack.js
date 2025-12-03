@@ -6,7 +6,7 @@ export default function TechStack() {
   ];
 
   return (
-    <section className="container mx-auto px-6 py-16">
+    <section id="tech-stack" className="container mx-auto px-6 py-16">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center">Stack Técnico</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
