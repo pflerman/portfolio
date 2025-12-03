@@ -9,6 +9,7 @@ export default function Navbar() {
   const navLinks = [
     { id: 'inicio', label: 'Inicio' },
     { id: 'sobre-mi', label: 'Sobre Mí' },
+    { id: 'blog', label: 'Blog' },
     { id: 'tech-stack', label: 'Tech Stack' },
     { id: 'proyectos', label: 'Proyectos' },
     { id: 'contacto', label: 'Contacto' },
