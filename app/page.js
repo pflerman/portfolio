@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
+import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <TechStack />
       <Projects />
+      <CallToAction />
       <Contact />
     </main>
   );
